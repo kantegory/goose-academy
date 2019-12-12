@@ -1,0 +1,253 @@
+body
+    background #f7f7f7
+    margin 0
+    padding 0
+    display flex
+    flex-direction column
+
+.logo
+    height min-content
+
+.shp0
+    fill #000000
+
+.shp1
+    fill #ffffff
+
+.shp2
+    fill #f97d38
+
+header
+    z-index 4
+    position sticky
+    top 0
+    display block
+
+nav
+    &.navbar
+        display flex
+        flex-direction row
+        flex-wrap nowrap
+        box-shadow 3px 0 3px rgba(0, 0, 0, .3)
+        padding 0.5rem 1rem
+
+.ml-1
+    margin-left 1em
+
+.ml-3
+    margin-left 3em
+
+.h-fit
+    height fit-content
+
+form
+    &.search
+        border 1px #c7c7c7 solid
+        border-radius 5px
+        width fit-content
+        margin-top auto
+        margin-bottom auto
+        & > input[type='search']
+            border none
+            min-width calc(100% - 40px)
+        & > button[type='submit']
+            border none
+            padding 0.5rem
+            height inherit
+            margin-left 0
+            min-width 36px
+            max-width 40px
+        & > input
+            font-size 12pt
+            padding 0.5rem 1rem
+            line-height 12pt
+
+.w-25
+    min-width 25%
+    max-width 25%
+
+.w-35
+    min-width 35%
+    max-width 35%
+
+.btn
+    cursor pointer
+    text-decoration none
+    margin-top auto
+    margin-bottom auto
+    padding 0.75rem 1rem
+    border-radius 5px
+    line-height 14pt
+    height fit-content
+
+.btn-big
+    text-decoration none
+    font-size 18pt
+    line-height 18pt
+    padding 1rem 1.5rem
+
+.btn-dark
+    background #2f3334
+    color #fff
+    &:hover
+        background #fff
+        color #2f3334
+
+.btn-outline
+    box-shadow 1px 1px 0 #2f3334 inset, -1px -1px 0 #2f3334 inset
+    color #2f3334
+    &:hover
+        box-shadow 1px 1px 0 #454b4d inset, -1px -1px 0 #454b4d inset
+        color #454b4d
+
+.btn-accent
+    background #f97d38
+    color #fff
+    &:hover
+        background #fff
+        color #f97d38
+
+.btn-white
+    background #fff
+    color #2f3334
+    &:hover
+        background #2f3334
+        color #fff
+
+.btn-outline-accent
+    background #fff
+    color #2f3334
+    &:hover
+        background #f97d38
+        color #fff
+
+.bg-white
+    background #fff
+    color #000
+
+.bg-dark
+    background #2f3334
+    color #fff
+
+ul
+    &.menu-right
+        margin-top auto
+        margin-bottom auto
+        display flex
+        margin-left auto
+        order 2
+        flex-flow row wrap
+        & > li
+            list-style-type none
+            margin-left 0.25rem
+
+a
+    &.nav-link
+        font-size 14pt
+        color #2f3334
+        text-decoration none
+        &:hover
+            color #454b4d
+
+.container
+    display grid
+    grid-template-columns repeat(3, 1fr)
+    grid-template-rows repeat(3, 1fr)
+    margin-top 0.25em
+    grid-column-gap 2em
+    grid-row-gap 2em
+    padding 0.5em 8%
+
+.card
+    display flex
+    flex-direction column
+    height inherit
+    width inherit
+    background #fff
+    box-shadow 3px 2px 3px rgba(0, 0, 0, .3)
+    border-radius 5px
+    justify-content space-between
+    &:hover
+        box-shadow 3px 0 7px rgba(0, 0, 0, .3)
+
+.card__header
+    width calc(100% - 2rem)
+    margin 1rem
+    & > img
+        width 100%
+        margin 0 auto
+
+.card__body
+    width calc(100% - 2rem)
+    margin 1rem
+    text-align justify
+    font-size 14pt
+    & > p
+        width 100%
+
+.card__footer
+    width 100%
+    background #f2f2f2
+    height 3em
+    bottom 0
+    & > p
+        font-size 12pt
+        line-height 12pt
+
+.banner
+    width 100%
+    min-height 500px
+    max-height 500px
+    position relative
+    margin 0 auto
+
+.banner-gradient
+    margin 0.1rem auto
+    background linear-gradient(90deg, #db5f4d, rgba(39, 16, 102, 0) 55%, rgba(39, 16, 102, 0) 70%, #db5f4d)
+    width 100%
+    height 100%
+    z-index 2
+    position absolute
+
+.banner-img
+    background-image url('banner.jpg')
+    background-position 50%
+    background-size cover
+    position absolute
+    z-index 1
+    margin 0.1rem auto
+    width 100%
+    height 100%
+
+.banner-text
+    color #fff
+    margin-top 5em
+    margin-left 5em
+    max-width 500px
+    padding 0.5rem 1rem
+    position absolute
+    width 100%
+    z-index 3
+    height 100%
+    & > p
+        font-size 18pt
+
+footer
+    box-shadow 3px 0 3px rgba(0, 0, 0, .3)
+    width 100%
+    flex 0 0 auto
+    & > h2
+        padding 2rem
+
+.float-right
+    float right
+
+@media (max-width: 1200px)
+    .container
+        grid-template-columns repeat(2, 1fr)
+        grid-template-rows repeat(5, 1fr)
+
+@media (max-width: 800px)
+    .container
+        grid-template-columns repeat(1, 1fr)
+        grid-template-rows repeat(9, 1fr)
